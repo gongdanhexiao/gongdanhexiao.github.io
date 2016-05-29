@@ -117,17 +117,7 @@
 				<section class="switch-part switch-part3">
 					<div id="js-friends">
 					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://uideal.com">优想</a>
 			        
 			        </div>
 				</section>
@@ -185,6 +175,65 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-第四章" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/29/第四章/" class="article-date">
+  	<time datetime="2016-05-29T09:28:39.309Z" itemprop="datePublished">2016-05-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/29/第四章/">第四章：海关工单核销报文规范</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：</p>
+<ol>
+<li>期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位等关键信息。<br> <img src="http://uideal.qiniudn.com/DraggedImage.png" alt=""></li>
+<li>工单报文，即企业实际生产使用的工单，包含工单编号、企业编码、账册编号等基本字段，又包含了工单日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位、领料日期、扣帐编号、领料类型、工单状态、工单类别、生产类别等关键信息。<strong>工单包含生产工单领料、生产工单退料、不良品返工、成品生产入库等。工单包括工单表头和工单表体，表头是指成品入库的部分，表体是指原料发料出库部分，抛送的报文要求不一致。</strong><br> 如下举例：1笔2016/5/12抛送的成品工单表头入库记录<br> <img src="http://uideal.qiniudn.com/DraggedImage-1.png" alt=""><br> 如下举例：1笔2016/5/12抛送的原材料工单表体出库记录<br> <img src="http://uideal.qiniudn.com/DraggedImage-2.png" alt=""></li>
+<li>出入库报文，是企业实际库房收货和出货的过账数据，包含出入库编号、企业编码、入库出库日期时间、料件半成品成品料号、帐册编号、出入库类型、报关单号、工单号、数量、差异数量、单位。（在此报文中，海关即可看到入库出库数量是否与进出口报关单数量吻合）<strong>说明：出入库包含进区入库（销售退货、外发加工退料、原料采购入库、分送集报入库、不良品交换入库、维修检测入库、卡口登记入库）、出区出库（外发加工发料、订单出货、原料采购退回、不良品交换出库、维修检测出库、分送集报出库、卡口登记出库）、其它入库（厂内移库、厂内样品领用等不进区入库数据）、其它出库（厂内移库、厂内样品领用等不出区出库数据）</strong><br> <img src="http://uideal.qiniudn.com/DraggedImage-3.png" alt=""></li>
+<li>期末库存报文，包含企业编码、电子帐册号、上传时间、数据条数、报文类型、仓库编号、库位标识、日期、料号、料号类别、数量、单位<strong>（在此报文中，海关可清晰地看到企业所有料号目前的库存情况，包括其所在库位，方便稽核）。</strong><br> <img src="http://uideal.qiniudn.com/DraggedImage-4.png" alt=""></li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-第二章" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -481,7 +530,7 @@
     		&copy; 2016 江黎
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="http://gongdanhexiao.com" target="_blank">本站</a>文章版权归本人所有，如需转载必须联系本人
       	</div>
     </div>
   </div>

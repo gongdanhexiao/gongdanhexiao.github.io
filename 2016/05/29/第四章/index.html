@@ -4,18 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>前言-写在前面的话 | 工单核销</title>
+  <title>第四章：海关工单核销报文规范 | 工单核销</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1990年6月经国务院批准设立，建立了中国第一个保税区——上海外高桥保税区,是目前全国经济总量最大的保税区。截止2016年,中国共计建立了120个以上的特殊监管区域，全国已逐渐成立保税区、出口加工区、保税物流园区、跨境工业园区、保税港区、综合保税区等多种监管区域模式，区内大型优质企业达上万家。　　自2010年7月1日起，海关对进出保税区的货物实行电子账册管理，根据联网内企业的生产情况确定核销周">
+  <meta name="description" content="企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：
+
+期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前言-写在前面的话">
-<meta property="og:url" content="www.gongdanhexiao.com/2016/05/22/前言/index.html">
+<meta property="og:title" content="第四章：海关工单核销报文规范">
+<meta property="og:url" content="www.gongdanhexiao.com/2016/05/29/第四章/index.html">
 <meta property="og:site_name" content="工单核销">
-<meta property="og:description" content="1990年6月经国务院批准设立，建立了中国第一个保税区——上海外高桥保税区,是目前全国经济总量最大的保税区。截止2016年,中国共计建立了120个以上的特殊监管区域，全国已逐渐成立保税区、出口加工区、保税物流园区、跨境工业园区、保税港区、综合保税区等多种监管区域模式，区内大型优质企业达上万家。　　自2010年7月1日起，海关对进出保税区的货物实行电子账册管理，根据联网内企业的生产情况确定核销周">
-<meta property="og:updated_time" content="2016-05-26T13:57:19.219Z">
+<meta property="og:description" content="企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：
+
+期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号">
+<meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage.png">
+<meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-1.png">
+<meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-2.png">
+<meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-3.png">
+<meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-4.png">
+<meta property="og:updated_time" content="2016-05-29T09:28:06.254Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前言-写在前面的话">
-<meta name="twitter:description" content="1990年6月经国务院批准设立，建立了中国第一个保税区——上海外高桥保税区,是目前全国经济总量最大的保税区。截止2016年,中国共计建立了120个以上的特殊监管区域，全国已逐渐成立保税区、出口加工区、保税物流园区、跨境工业园区、保税港区、综合保税区等多种监管区域模式，区内大型优质企业达上万家。　　自2010年7月1日起，海关对进出保税区的货物实行电子账册管理，根据联网内企业的生产情况确定核销周">
+<meta name="twitter:title" content="第四章：海关工单核销报文规范">
+<meta name="twitter:description" content="企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：
+
+期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号">
+<meta name="twitter:image" content="http://uideal.qiniudn.com/DraggedImage.png">
   
     <link rel="alternative" href="/atom.xml" title="工单核销" type="application/atom+xml">
   
@@ -175,11 +187,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-前言" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-第四章" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/22/前言/" class="article-date">
-  	<time datetime="2016-05-22T08:37:03.253Z" itemprop="datePublished">2016-05-22</time>
+      <a href="/2016/05/29/第四章/" class="article-date">
+  	<time datetime="2016-05-29T09:28:39.309Z" itemprop="datePublished">2016-05-29</time>
 </a>
     </div>
   
@@ -192,7 +204,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      前言-写在前面的话
+      第四章：海关工单核销报文规范
     </h1>
   
 
@@ -208,7 +220,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　1990年6月经国务院批准设立，建立了中国第一个保税区——上海外高桥保税区,是目前全国经济总量最大的保税区。截止2016年,中国共计建立了120个以上的特殊监管区域，全国已逐渐成立保税区、出口加工区、保税物流园区、跨境工业园区、保税港区、综合保税区等多种监管区域模式，区内大型优质企业达上万家。<br>　　自2010年7月1日起，海关对进出保税区的货物实行电子账册管理，根据联网内企业的生产情况确定核销周期，要求企业每6个月核销一次。在企业每年2次核销的过程中，企业实际生产情况与海关的单耗核销要求存在巨大差异，海关无法信任企业提交的数据，企业也不愿意按海关的理论数据进行补税，双方各执一词，使得核销作业相当痛苦，还迟迟不能结案。<br>　　故海关和企业都急需进行改革推新，使用新型的核销方式来解决这类问题。因此2013年开始，海关进行改革推新，推出了新型的核销方式——工单核销，以此解决双方的巨大差异问题。目前新型的工单核销作业已在成都、重庆保税区试点，保税区内已有几家大型生产型企业试点成功，最成功的企业将核销差异从以往的1%大幅下降至约0.01%，减轻了巨大的核销压力，降低了补税金额，海关和企业都皆大欢喜。<br>　　2016年伊始，海关总署在全国范围内大量推广工单核销业务模式，未来各大型保税区内企业均有此工单核销上线需求。但是工单核销并不是适用所有企业，区内企业的作业面和系统面均需达到海关要求，企业才可使用此模式进行核销。<br>　　笔者从海关2013年开始试点就一直参与学习和追踪，对海关的工单核销要求与企业实际情况均进行了深入了解，配合海关要求协调企业内部各项操作，目前已成功导入工单核销。笔者将对工单核销进行详细阐述，希望通过分享让有需求的企业更清楚海关工单核销要求和逻辑，从操作面及系统面进行切入，力求使企业了解最低架构的配置，帮助企业成功上线工单核销系统，减少操作错误与系统缺失的一系列问题。</p>
+        <p>　　企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：</p>
+<ol>
+<li>期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位等关键信息。<br> <img src="http://uideal.qiniudn.com/DraggedImage.png" alt=""></li>
+<li>工单报文，即企业实际生产使用的工单，包含工单编号、企业编码、账册编号等基本字段，又包含了工单日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位、领料日期、扣帐编号、领料类型、工单状态、工单类别、生产类别等关键信息。<strong>工单包含生产工单领料、生产工单退料、不良品返工、成品生产入库等。工单包括工单表头和工单表体，表头是指成品入库的部分，表体是指原料发料出库部分，抛送的报文要求不一致。</strong><br> 如下举例：1笔2016/5/12抛送的成品工单表头入库记录<br> <img src="http://uideal.qiniudn.com/DraggedImage-1.png" alt=""><br> 如下举例：1笔2016/5/12抛送的原材料工单表体出库记录<br> <img src="http://uideal.qiniudn.com/DraggedImage-2.png" alt=""></li>
+<li>出入库报文，是企业实际库房收货和出货的过账数据，包含出入库编号、企业编码、入库出库日期时间、料件半成品成品料号、帐册编号、出入库类型、报关单号、工单号、数量、差异数量、单位。（在此报文中，海关即可看到入库出库数量是否与进出口报关单数量吻合）<strong>说明：出入库包含进区入库（销售退货、外发加工退料、原料采购入库、分送集报入库、不良品交换入库、维修检测入库、卡口登记入库）、出区出库（外发加工发料、订单出货、原料采购退回、不良品交换出库、维修检测出库、分送集报出库、卡口登记出库）、其它入库（厂内移库、厂内样品领用等不进区入库数据）、其它出库（厂内移库、厂内样品领用等不出区出库数据）</strong><br> <img src="http://uideal.qiniudn.com/DraggedImage-3.png" alt=""></li>
+<li>期末库存报文，包含企业编码、电子帐册号、上传时间、数据条数、报文类型、仓库编号、库位标识、日期、料号、料号类别、数量、单位<strong>（在此报文中，海关可清晰地看到企业所有料号目前的库存情况，包括其所在库位，方便稽核）。</strong><br> <img src="http://uideal.qiniudn.com/DraggedImage-4.png" alt=""></li>
+</ol>
 
       
     </div>
@@ -218,15 +236,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/22/第一章/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          第一章：特殊监管区内企业单耗核销操作详述
-        
-      </div>
-    </a>
   
+    <a href="/2016/05/26/第二章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第二章：工单核销理念及优缺点介绍</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -259,7 +273,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="前言" data-title="前言-写在前面的话" data-url="www.gongdanhexiao.com/2016/05/22/前言/"></div>
+	<div class="ds-thread" data-thread-key="第四章" data-title="第四章：海关工单核销报文规范" data-url="www.gongdanhexiao.com/2016/05/29/第四章/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
