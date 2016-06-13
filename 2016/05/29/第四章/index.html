@@ -4,30 +4,40 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>第四章：海关工单核销报文规范 | 工单核销</title>
+  <title>第四章：企业工单核销系统架构及报文规范 | 工单核销</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：
+  <meta name="description" content="企业工单核销架构　　企业需根据实际情况，建立内部工单核销系统架构，以便抛送收货、出货、工单和库存报文：　　
 
-期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号">
+企业ERP系统需将收货、出货、工单、库存抛送进关务核销系统；
+关务系统根据收货、出货、工单、库存和报关单数据产生报文，抛送给海关；
+企业抛送接口需电子口岸通道顺畅，利用B2B模式进行抛送；
+报文内容全部抛送进海关工单核销系统工单报文规范　　企业通过每天向海关发送中期核查数据来反映企业的运营">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第四章：海关工单核销报文规范">
+<meta property="og:title" content="第四章：企业工单核销系统架构及报文规范">
 <meta property="og:url" content="www.gongdanhexiao.com/2016/05/29/第四章/index.html">
 <meta property="og:site_name" content="工单核销">
-<meta property="og:description" content="企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：
+<meta property="og:description" content="企业工单核销架构　　企业需根据实际情况，建立内部工单核销系统架构，以便抛送收货、出货、工单和库存报文：　　
 
-期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号">
+企业ERP系统需将收货、出货、工单、库存抛送进关务核销系统；
+关务系统根据收货、出货、工单、库存和报关单数据产生报文，抛送给海关；
+企业抛送接口需电子口岸通道顺畅，利用B2B模式进行抛送；
+报文内容全部抛送进海关工单核销系统工单报文规范　　企业通过每天向海关发送中期核查数据来反映企业的运营">
+<meta property="og:image" content="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.26.38.png">
 <meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage.png">
 <meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-1.png">
 <meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-2.png">
 <meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-3.png">
 <meta property="og:image" content="http://uideal.qiniudn.com/DraggedImage-4.png">
-<meta property="og:updated_time" content="2016-05-29T09:38:37.416Z">
+<meta property="og:updated_time" content="2016-06-13T14:27:31.308Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第四章：海关工单核销报文规范">
-<meta name="twitter:description" content="企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：
+<meta name="twitter:title" content="第四章：企业工单核销系统架构及报文规范">
+<meta name="twitter:description" content="企业工单核销架构　　企业需根据实际情况，建立内部工单核销系统架构，以便抛送收货、出货、工单和库存报文：　　
 
-期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号">
-<meta name="twitter:image" content="http://uideal.qiniudn.com/DraggedImage.png">
+企业ERP系统需将收货、出货、工单、库存抛送进关务核销系统；
+关务系统根据收货、出货、工单、库存和报关单数据产生报文，抛送给海关；
+企业抛送接口需电子口岸通道顺畅，利用B2B模式进行抛送；
+报文内容全部抛送进海关工单核销系统工单报文规范　　企业通过每天向海关发送中期核查数据来反映企业的运营">
+<meta name="twitter:image" content="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.26.38.png">
   
     <link rel="alternative" href="/atom.xml" title="工单核销" type="application/atom+xml">
   
@@ -204,7 +214,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第四章：海关工单核销报文规范
+      第四章：企业工单核销系统架构及报文规范
     </h1>
   
 
@@ -220,8 +230,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：</p>
+        <h2 id="企业工单核销架构"><a href="#企业工单核销架构" class="headerlink" title="企业工单核销架构"></a>企业工单核销架构</h2><p>　　企业需根据实际情况，建立内部工单核销系统架构，以便抛送收货、出货、工单和库存报文：<br><img src="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.26.38.png" alt="">　　</p>
 <ol>
+<li>企业ERP系统需将收货、出货、工单、库存抛送进关务核销系统；</li>
+<li>关务系统根据收货、出货、工单、库存和报关单数据产生报文，抛送给海关；</li>
+<li>企业抛送接口需电子口岸通道顺畅，利用B2B模式进行抛送；</li>
+<li>报文内容全部抛送进海关工单核销系统<h2 id="工单报文规范"><a href="#工单报文规范" class="headerlink" title="工单报文规范"></a>工单报文规范</h2>　　企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：</li>
 <li>期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位等关键信息。<br> <img src="http://uideal.qiniudn.com/DraggedImage.png" alt=""></li>
 <li>工单报文，即企业实际生产使用的工单，包含工单编号、企业编码、账册编号等基本字段，又包含了工单日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位、领料日期、扣帐编号、领料类型、工单状态、工单类别、生产类别等关键信息。<strong>工单包含生产工单领料、生产工单退料、不良品返工、成品生产入库等。工单包括工单表头和工单表体，表头是指成品入库的部分，表体是指原料发料出库部分，抛送的报文要求不一致。</strong><br> 如下举例：1笔2016/5/12抛送的成品工单表头入库记录<br> <img src="http://uideal.qiniudn.com/DraggedImage-1.png" alt=""><br> 如下举例：1笔2016/5/12抛送的原材料工单表体出库记录<br> <img src="http://uideal.qiniudn.com/DraggedImage-2.png" alt=""></li>
 <li>出入库报文，是企业实际库房收货和出货的过账数据，包含出入库编号、企业编码、入库出库日期时间、料件半成品成品料号、帐册编号、出入库类型、报关单号、工单号、数量、差异数量、单位。（在此报文中，海关即可看到入库出库数量是否与进出口报关单数量吻合）<strong>说明：出入库包含进区入库（销售退货、外发加工退料、原料采购入库、分送集报入库、不良品交换入库、维修检测入库、卡口登记入库）、出区出库（外发加工发料、订单出货、原料采购退回、不良品交换出库、维修检测出库、分送集报出库、卡口登记出库）、其它入库（厂内移库、厂内样品领用等不进区入库数据）、其它出库（厂内移库、厂内样品领用等不出区出库数据）</strong><br> <img src="http://uideal.qiniudn.com/DraggedImage-3.png" alt=""></li>
@@ -235,6 +249,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/06/13/第六章/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          第六章：工单核销系统计算逻辑和案例分析
+        
+      </div>
+    </a>
   
   
     <a href="/2016/05/26/第二章/" id="article-nav-older" class="article-nav-link-wrap">
@@ -273,7 +296,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="第四章" data-title="第四章：海关工单核销报文规范" data-url="www.gongdanhexiao.com/2016/05/29/第四章/"></div>
+	<div class="ds-thread" data-thread-key="第四章" data-title="第四章：企业工单核销系统架构及报文规范" data-url="www.gongdanhexiao.com/2016/05/29/第四章/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

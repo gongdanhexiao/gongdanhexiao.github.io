@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>第五章：海关工单核销系统架构 | 工单核销</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="海关工单核销系统机构　　海关工单核销系统的运行需要企业和海关系统数据交互，实现各项数据的串连对接，才能最终将各项数据用于最后核销核算。
+
+企业ERP系统：用于企业内部管理系统，对日常出入库数据、期初数据、库存数据的维护和抛送。
+综合物流服务平台：与海关物流监管系统同属一个系统的两种权限，开放给企业的权限是进行报关申请单的申请和车卡绑定，分送集报、暂时进出区货物、卡口登记（非报关）货物、进出境业务数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第五章：海关工单核销系统架构">
+<meta property="og:url" content="www.gongdanhexiao.com/2016/06/13/第五章/index.html">
+<meta property="og:site_name" content="工单核销">
+<meta property="og:description" content="海关工单核销系统机构　　海关工单核销系统的运行需要企业和海关系统数据交互，实现各项数据的串连对接，才能最终将各项数据用于最后核销核算。
+
+企业ERP系统：用于企业内部管理系统，对日常出入库数据、期初数据、库存数据的维护和抛送。
+综合物流服务平台：与海关物流监管系统同属一个系统的两种权限，开放给企业的权限是进行报关申请单的申请和车卡绑定，分送集报、暂时进出区货物、卡口登记（非报关）货物、进出境业务数">
+<meta property="og:image" content="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.10.png">
+<meta property="og:image" content="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.33.png">
+<meta property="og:image" content="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.49.png">
+<meta property="og:updated_time" content="2016-06-13T14:27:23.925Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第五章：海关工单核销系统架构">
+<meta name="twitter:description" content="海关工单核销系统机构　　海关工单核销系统的运行需要企业和海关系统数据交互，实现各项数据的串连对接，才能最终将各项数据用于最后核销核算。
+
+企业ERP系统：用于企业内部管理系统，对日常出入库数据、期初数据、库存数据的维护和抛送。
+综合物流服务平台：与海关物流监管系统同属一个系统的两种权限，开放给企业的权限是进行报关申请单的申请和车卡绑定，分送集报、暂时进出区货物、卡口登记（非报关）货物、进出境业务数">
+<meta name="twitter:image" content="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.10.png">
+  
+    <link rel="alternative" href="/atom.xml" title="工单核销" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://uideal.qiniudn.com/img_0813_%E5%89%AF%E6%9C%AC1111.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">江黎</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">工单核销学习与实践</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://uideal.com">优想</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">工单核销学习与实践</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">江黎</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://uideal.qiniudn.com/img_0813_%E5%89%AF%E6%9C%AC1111.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">江黎</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">工单核销学习与实践</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-第五章" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/13/第五章/" class="article-date">
+  	<time datetime="2016-06-13T14:28:01.267Z" itemprop="datePublished">2016-06-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      第五章：海关工单核销系统架构
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="海关工单核销系统机构"><a href="#海关工单核销系统机构" class="headerlink" title="海关工单核销系统机构"></a>海关工单核销系统机构</h2><p>　　海关工单核销系统的运行需要企业和海关系统数据交互，实现各项数据的串连对接，才能最终将各项数据用于最后核销核算。<br><img src="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.10.png" alt=""></p>
+<ol>
+<li>企业ERP系统：用于企业内部管理系统，对日常出入库数据、期初数据、库存数据的维护和抛送。</li>
+<li>综合物流服务平台：与海关物流监管系统同属一个系统的两种权限，开放给企业的权限是进行报关申请单的申请和车卡绑定，分送集报、暂时进出区货物、卡口登记（非报关）货物、进出境业务数据的申请。</li>
+<li>海关物流监管系统：开放给海关的权限，是用于海关审批和放行企业日常进出区的物流数据申报，分送集报、暂时进出区货物、卡口登记（非报关）货物等业务，也包括进出境业务数据。</li>
+<li>海关H2010系统：用于海关报关审批和放行报关单业务，包括进口和出口业务。</li>
+<li>海关工单核销系统：企业出入库数据、海关物流放行数据、订阅H2010数据的比对；企业实际盘点数据与理论库存的比对；海关对重点材料专门进行管理和核查、核算，对企业加工贸易数据进行追溯分析。<h2 id="工单核查系统异常比对"><a href="#工单核查系统异常比对" class="headerlink" title="工单核查系统异常比对"></a>工单核查系统异常比对</h2>　　海关工单核销系统中，有如下数据会形成日常比对及周期比对，如产生异常会提示预警，海关会要求企业解释原因并解决异常：<br><img src="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.33.png" alt=""><h2 id="海关工单核销系统数据流比对"><a href="#海关工单核销系统数据流比对" class="headerlink" title="海关工单核销系统数据流比对"></a>海关工单核销系统数据流比对</h2><img src="http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.49.png" alt=""></li>
+<li>企业的仓储系统与海关物流监管系统数据进行比对：企业的进口报关申请单与入库数据进行比对；企业的出口报关申请单与出库数据进行比对；企业分送集报进出口非报关单与出入库数据进行比对；料件和成品的理论库存与实际库存进行比对；</li>
+<li>定期（默认14天）对出入库数据和工单数据进行累计计算、比对ERP理论库存；</li>
+<li>系统根据企业定期（180天内）发送的仓库发料和退料情况，自动滚动企业当期的理论库存；</li>
+<li>企业期末库存数据(盘点数据)上传工单系统与核销理论库存对比，以最终的盘亏盘盈数据进行核销补税。</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/13/第六章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第六章：工单核销系统计算逻辑和案例分析</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="第五章" data-title="第五章：海关工单核销系统架构" data-url="www.gongdanhexiao.com/2016/06/13/第五章/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 江黎丨<a href="http://gongdanhexiao.com/atom.xml" target="_blank">RSS</a>
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://gongdanhexiao.com" target="_blank">本站</a>文章版权归本人所有，如需转载必须联系本人
+			
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

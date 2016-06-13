@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.gongdanhexiao.com/"/>
-  <updated>2016-05-29T09:38:37.416Z</updated>
+  <updated>2016-06-13T14:27:23.925Z</updated>
   <id>www.gongdanhexiao.com/</id>
   
   <author>
@@ -16,14 +16,85 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第四章：海关工单核销报文规范</title>
+    <title>第五章：海关工单核销系统架构</title>
+    <link href="www.gongdanhexiao.com/2016/06/13/%E7%AC%AC%E4%BA%94%E7%AB%A0/"/>
+    <id>www.gongdanhexiao.com/2016/06/13/第五章/</id>
+    <published>2016-06-13T14:28:01.267Z</published>
+    <updated>2016-06-13T14:27:23.925Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;海关工单核销系统机构&quot;&gt;&lt;a href=&quot;#海关工单核销系统机构&quot; class=&quot;headerlink&quot; title=&quot;海关工单核销系统机构&quot;&gt;&lt;/a&gt;海关工单核销系统机构&lt;/h2&gt;&lt;p&gt;　　海关工单核销系统的运行需要企业和海关系统数据交互，实现各项数据的串连对接，才能最终将各项数据用于最后核销核算。&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.10.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;企业ERP系统：用于企业内部管理系统，对日常出入库数据、期初数据、库存数据的维护和抛送。&lt;/li&gt;
+&lt;li&gt;综合物流服务平台：与海关物流监管系统同属一个系统的两种权限，开放给企业的权限是进行报关申请单的申请和车卡绑定，分送集报、暂时进出区货物、卡口登记（非报关）货物、进出境业务数据的申请。&lt;/li&gt;
+&lt;li&gt;海关物流监管系统：开放给海关的权限，是用于海关审批和放行企业日常进出区的物流数据申报，分送集报、暂时进出区货物、卡口登记（非报关）货物等业务，也包括进出境业务数据。&lt;/li&gt;
+&lt;li&gt;海关H2010系统：用于海关报关审批和放行报关单业务，包括进口和出口业务。&lt;/li&gt;
+&lt;li&gt;海关工单核销系统：企业出入库数据、海关物流放行数据、订阅H2010数据的比对；企业实际盘点数据与理论库存的比对；海关对重点材料专门进行管理和核查、核算，对企业加工贸易数据进行追溯分析。&lt;h2 id=&quot;工单核查系统异常比对&quot;&gt;&lt;a href=&quot;#工单核查系统异常比对&quot; class=&quot;headerlink&quot; title=&quot;工单核查系统异常比对&quot;&gt;&lt;/a&gt;工单核查系统异常比对&lt;/h2&gt;　　海关工单核销系统中，有如下数据会形成日常比对及周期比对，如产生异常会提示预警，海关会要求企业解释原因并解决异常：&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.33.png&quot; alt=&quot;&quot;&gt;&lt;h2 id=&quot;海关工单核销系统数据流比对&quot;&gt;&lt;a href=&quot;#海关工单核销系统数据流比对&quot; class=&quot;headerlink&quot; title=&quot;海关工单核销系统数据流比对&quot;&gt;&lt;/a&gt;海关工单核销系统数据流比对&lt;/h2&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.32.49.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;企业的仓储系统与海关物流监管系统数据进行比对：企业的进口报关申请单与入库数据进行比对；企业的出口报关申请单与出库数据进行比对；企业分送集报进出口非报关单与出入库数据进行比对；料件和成品的理论库存与实际库存进行比对；&lt;/li&gt;
+&lt;li&gt;定期（默认14天）对出入库数据和工单数据进行累计计算、比对ERP理论库存；&lt;/li&gt;
+&lt;li&gt;系统根据企业定期（180天内）发送的仓库发料和退料情况，自动滚动企业当期的理论库存；&lt;/li&gt;
+&lt;li&gt;企业期末库存数据(盘点数据)上传工单系统与核销理论库存对比，以最终的盘亏盘盈数据进行核销补税。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;海关工单核销系统机构&quot;&gt;&lt;a href=&quot;#海关工单核销系统机构&quot; class=&quot;headerlink&quot; title=&quot;海关工单核销系统机构&quot;&gt;&lt;/a&gt;海关工单核销系统机构&lt;/h2&gt;&lt;p&gt;　　海关工单核销系统的运行需要企业和海关系统数据交互，实现各项数据的串连对接
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第六章：工单核销系统计算逻辑和案例分析</title>
+    <link href="www.gongdanhexiao.com/2016/06/13/%E7%AC%AC%E5%85%AD%E7%AB%A0/"/>
+    <id>www.gongdanhexiao.com/2016/06/13/第六章/</id>
+    <published>2016-06-13T14:28:01.208Z</published>
+    <updated>2016-06-13T14:27:36.475Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;工单核销计算逻辑公式&quot;&gt;&lt;a href=&quot;#工单核销计算逻辑公式&quot; class=&quot;headerlink&quot; title=&quot;工单核销计算逻辑公式&quot;&gt;&lt;/a&gt;工单核销计算逻辑公式&lt;/h3&gt;&lt;p&gt;&lt;em&gt;理论库存数（料件）&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;料件入库=进区入库+生产工单退料（工单退料） +其它入库；&lt;/li&gt;
+&lt;li&gt;料件出库=出区出库+生产工单领料（工单领料） +其它出库；&lt;/li&gt;
+&lt;li&gt;理论库存=期初+料件入库-料件出库；&lt;/li&gt;
+&lt;li&gt;实际库存=实盘库存&lt;br&gt;&lt;em&gt;理论库存数（成品）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;成品入库=进区入库+成品生产入库（工单制成）+其它入库&lt;/li&gt;
+&lt;li&gt;成品出库=出区出库+不良品返工（工单返工）+其它出库&lt;/li&gt;
+&lt;li&gt;理论库存=期初+成品入库-成品出库&lt;/li&gt;
+&lt;li&gt;实际库存=实盘库存&lt;br&gt;期初数：上一期盘点实盘数量。&lt;br&gt;进区入库：销售退货、外发加工退料、原料采购入库、分送集报入库、不良品交换入库、维修检测入库、卡口登记入库&lt;br&gt;出区出库：外发加工发料、订单出货、原料采购退回、不良品交换出库、维修检测出库、分送集报出库、卡口登记出库&lt;br&gt;其它入库：厂内移库、厂内样品领用等不进区入库数据&lt;br&gt;其它出库：厂内移库、厂内样品领用等不出区出库数据&lt;h3 id=&quot;工单核销计算类型说明&quot;&gt;&lt;a href=&quot;#工单核销计算类型说明&quot; class=&quot;headerlink&quot; title=&quot;工单核销计算类型说明&quot;&gt;&lt;/a&gt;工单核销计算类型说明&lt;/h3&gt;　　在企业实际生产过程中，会存在不同类型的移转单代码，用以区分是进账、出账和工单类型，下面给大家作简单的说明，以便知晓如何计算：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;移转单代码：&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.44.21.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;进区入库代码：&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.45.30.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;出区出库代码：&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.46.29.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;工单代码：&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.47.24.png&quot; alt=&quot;&quot;&gt;&lt;h3 id=&quot;工单核销计算案例分析：&quot;&gt;&lt;a href=&quot;#工单核销计算案例分析：&quot; class=&quot;headerlink&quot; title=&quot;工单核销计算案例分析：&quot;&gt;&lt;/a&gt;工单核销计算案例分析：&lt;/h3&gt;　　下面以一个原料的生产数据为例，通过半年核销期内所有的入库、出库、工单领退料进行计算，最终计算结果是此硬盘盘亏15个，企业和海关按照硬盘的价格和HS CODE进行补税。&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.49.01.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;　　以上即为此次工单核销内容分享，涉及企业、海关的流程改变和操作要求，为达到整体工单系统的数据传输，需各企业和海关共同努力发现问题，并追根究底的进行解决，并建议防呆预警机制避免再次出现异常。如有疑问可大家共同交流学习。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;工单核销计算逻辑公式&quot;&gt;&lt;a href=&quot;#工单核销计算逻辑公式&quot; class=&quot;headerlink&quot; title=&quot;工单核销计算逻辑公式&quot;&gt;&lt;/a&gt;工单核销计算逻辑公式&lt;/h3&gt;&lt;p&gt;&lt;em&gt;理论库存数（料件）&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;料件入库=进
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第四章：企业工单核销系统架构及报文规范</title>
     <link href="www.gongdanhexiao.com/2016/05/29/%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
     <id>www.gongdanhexiao.com/2016/05/29/第四章/</id>
     <published>2016-05-29T09:28:39.309Z</published>
-    <updated>2016-05-29T09:38:37.416Z</updated>
+    <updated>2016-06-13T14:27:31.308Z</updated>
     
-    <content type="html">&lt;p&gt;　　企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;企业工单核销架构&quot;&gt;&lt;a href=&quot;#企业工单核销架构&quot; class=&quot;headerlink&quot; title=&quot;企业工单核销架构&quot;&gt;&lt;/a&gt;企业工单核销架构&lt;/h2&gt;&lt;p&gt;　　企业需根据实际情况，建立内部工单核销系统架构，以便抛送收货、出货、工单和库存报文：&lt;br&gt;&lt;img src=&quot;http://uideal.qiniudn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-06-13%20%E4%B8%8B%E5%8D%889.26.38.png&quot; alt=&quot;&quot;&gt;　　&lt;/p&gt;
 &lt;ol&gt;
+&lt;li&gt;企业ERP系统需将收货、出货、工单、库存抛送进关务核销系统；&lt;/li&gt;
+&lt;li&gt;关务系统根据收货、出货、工单、库存和报关单数据产生报文，抛送给海关；&lt;/li&gt;
+&lt;li&gt;企业抛送接口需电子口岸通道顺畅，利用B2B模式进行抛送；&lt;/li&gt;
+&lt;li&gt;报文内容全部抛送进海关工单核销系统&lt;h2 id=&quot;工单报文规范&quot;&gt;&lt;a href=&quot;#工单报文规范&quot; class=&quot;headerlink&quot; title=&quot;工单报文规范&quot;&gt;&lt;/a&gt;工单报文规范&lt;/h2&gt;　　企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：&lt;/li&gt;
 &lt;li&gt;期初报文即企业核销周期的期初数据，包含企业编码、账册编号等基本字段，又包含了日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位等关键信息。&lt;br&gt; &lt;img src=&quot;http://uideal.qiniudn.com/DraggedImage.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
 &lt;li&gt;工单报文，即企业实际生产使用的工单，包含工单编号、企业编码、账册编号等基本字段，又包含了工单日期、制成或耗用的成品半成品料号、成品半成品数量、单位、耗用原料半成品料号、数量、单位、领料日期、扣帐编号、领料类型、工单状态、工单类别、生产类别等关键信息。&lt;strong&gt;工单包含生产工单领料、生产工单退料、不良品返工、成品生产入库等。工单包括工单表头和工单表体，表头是指成品入库的部分，表体是指原料发料出库部分，抛送的报文要求不一致。&lt;/strong&gt;&lt;br&gt; 如下举例：1笔2016/5/12抛送的成品工单表头入库记录&lt;br&gt; &lt;img src=&quot;http://uideal.qiniudn.com/DraggedImage-1.png&quot; alt=&quot;&quot;&gt;&lt;br&gt; 如下举例：1笔2016/5/12抛送的原材料工单表体出库记录&lt;br&gt; &lt;img src=&quot;http://uideal.qiniudn.com/DraggedImage-2.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
 &lt;li&gt;出入库报文，是企业实际库房收货和出货的过账数据，包含出入库编号、企业编码、入库出库日期时间、料件半成品成品料号、帐册编号、出入库类型、报关单号、工单号、数量、差异数量、单位。（在此报文中，海关即可看到入库出库数量是否与进出口报关单数量吻合）&lt;strong&gt;说明：出入库包含进区入库（销售退货、外发加工退料、原料采购入库、分送集报入库、不良品交换入库、维修检测入库、卡口登记入库）、出区出库（外发加工发料、订单出货、原料采购退回、不良品交换出库、维修检测出库、分送集报出库、卡口登记出库）、其它入库（厂内移库、厂内样品领用等不进区入库数据）、其它出库（厂内移库、厂内样品领用等不出区出库数据）&lt;/strong&gt;&lt;br&gt; &lt;img src=&quot;http://uideal.qiniudn.com/DraggedImage-3.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
@@ -33,9 +104,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;　　企业通过每天向海关发送中期核查数据来反映企业的运营情况，每天发送的数据为前一天的工单及出入库数据，分别以工单、出入库的报文形式向海关发送，且企业需要定期向海关发送库存数据，以库存报文的形式发送。下面笔者将用成都的各类工单报文规范进行举例说明：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
+      &lt;h2 id=&quot;企业工单核销架构&quot;&gt;&lt;a href=&quot;#企业工单核销架构&quot; class=&quot;headerlink&quot; title=&quot;企业工单核销架构&quot;&gt;&lt;/a&gt;企业工单核销架构&lt;/h2&gt;&lt;p&gt;　　企业需根据实际情况，建立内部工单核销系统架构，以便抛送收货、出货、工单和库存报文：&lt;br
     
     </summary>
     
